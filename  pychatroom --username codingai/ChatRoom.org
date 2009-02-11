@@ -1,0 +1,28 @@
+* Overview
+  The program is implemented in Python programming language with
+  Server-Client architecture. The default communication is group
+  communication, which means the messages sent by every client is
+  multicasted to every other clients. If one client want to chat with
+  another client, it just needs to specify the client name in the
+  message. 
+* Features
+   1. Server-Client Architecture;
+   2. TCP Protocol
+   3. Multi-Threaded server, each thread is responsible for a client
+      connection;
+   3. Multi-Threaded client, one for send message, another one for
+      listening to server messages;
+   4. Mutex is used on server to exclusively operate on client
+      sockets;
+   5. Special commands: 
+      "l" - list online users;
+      "username>>>'message'" - send message to specific client;
+   6. When one client connects to/disconnect from the server, all other clients are
+      notified;
+   7. GUI enabled;
+   8. cross-platform.
+* Reference
+** Libraries
+   1. wxpython - GUI
+   2. [[http://docs.python.org/library/socket.html][python socket module]]
+   3. python thread module
